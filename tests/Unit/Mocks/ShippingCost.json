@@ -1,0 +1,34 @@
+{
+  "token_oferta": "64af03df88d2b6886e066096",
+  "transportadoras": [
+      {
+          "oferta": 1,
+          "cnpj": "69436534000161",
+          "logotipo": "https://s3.amazonaws.com/public.prod.freterapido.uploads/transportadora/foto-perfil/69436534000161.png",
+          "nome": "EXPRESSO FR (TESTE)",
+          "servico": "Normal",
+          "prazo_entrega_minutos": 31,
+          "prazo_entrega_horas": 22,
+          "prazo_entrega": 6,
+          "entrega_estimada": "2023-07-20",
+          "validade": "2023-08-11",
+          "custo_frete": 80.96,
+          "preco_frete": 80.96
+      }
+  ],
+  "volumes": [
+      {
+          "tipo": 999,
+          "sku": "ABC123",
+          "tag": "",
+          "descricao": "Produto descrição 01",
+          "quantidade": 1,
+          "altura": 0.25,
+          "largura": 0.08,
+          "comprimento": 0.15,
+          "peso": 0.5,
+          "valor": 9.9,
+          "volumes_produto": 1
+      }
+  ]
+}

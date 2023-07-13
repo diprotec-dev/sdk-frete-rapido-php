@@ -1,0 +1,27 @@
+{
+  "name": "diprotec-dev/sdk-frete-rapido-php",
+  "description": "FreteRapido PHP Library",
+  "type": "lib",
+  "homepage": "https://github.com/diprotec-dev/sdk-freterapido",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "FreteRapido\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+    "guzzlehttp/guzzle": "^7.4"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.23.0"
+  },
+  "scripts": {
+    "test": "./vendor/bin/pest"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
