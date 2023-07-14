@@ -1,0 +1,142 @@
+{
+    "id_frete": "FR230714OFWAO",
+    "url_rastreio": "https://ondeestameupedido.com.br/FR230714OFWAO",
+    "numero_pedido_pai": null,
+    "numero_pedido": "1346200500862-01",
+    "data_pedido": null,
+    "data_faturamento": null,
+    "data_prevista_entrega": "2023-07-25",
+    "forma_pagamento": null,
+    "obs_cliente": "Ligar para cliente antes da entrega",
+    "data_contratacao": "2023-07-14 11:28:07",
+    "tipo_cobranca": "CIF",
+    "modal": "Rodoviário",
+    "data_coleta": "",
+    "embarcador": {
+      "cnpj": "82.193.244/0001-00",
+      "inscricao_estadual": "10177667-04",
+      "razao_social": "DIPROTEC DISTRIBUIDORA DE PRODUTOS TECNICOS PARA CONSTRUCAO CIVIL LTDA",
+      "nome_fantasia": "CONTA DE TESTE",
+      "endereco": {
+        "rua": "AVENIDA REPÚBLICA ARGENTINA",
+        "numero": "1155",
+        "complemento": "",
+        "bairro": "VILA IZABEL",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "80620-010"
+      }
+    },
+    "destinatario": {
+      "cnpj_cpf": "734.892.472-72",
+      "nome": "LEONIDAS AMORIM",
+      "endereco": {
+        "rua": "RUA DONA ALICE TIBIRIÇÁ,",
+        "numero": "244",
+        "complemento": "BLOCO 1B - APTO 12",
+        "bairro": "BIGORRILHO",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "80730-320"
+      }
+    },
+    "expedidor": {
+      "cnpj": "82.193.244/0001-00",
+      "inscricao_estadual": "123456",
+      "razao_social": "DIPROTEC DISTRIBUIDORA DE PROD",
+      "nome_fantasia": "",
+      "endereco": {
+        "rua": "AVENIDA REPÚBLICA ARGENTINA",
+        "numero": "1155",
+        "complemento": "",
+        "bairro": "VILA IZABEL",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "80620-010"
+      }
+    },
+    "volumes": [
+      {
+        "tipo": "Outros",
+        "sku": "16317",
+        "descricao": "Aditivo Plastificante Sika Concreto Forte Sache 1L SIKA",
+        "quantidade": 1,
+        "peso_total": 1.07,
+        "valor_total": 7.39,
+        "altura": 0.25,
+        "largura": 0.09,
+        "comprimento": 0.09,
+        "volumes_produto": 9,
+        "itens": [ ]
+      }
+    ],
+    "transportadora": {
+      "cnpj": "69.436.534/0001-61",
+      "razao_social": "TRANSPORTADORA EXPRESSO FR (TESTE)",
+      "nome_fantasia": "EXPRESSO FR (TESTE)",
+      "inscricao_estadual": "ISENTO",
+      "valor_cotado": 81,
+      "servico": "Normal",
+      "endereco": {
+        "cep": "29730000",
+        "bairro": "CENTRO",
+        "rua": "RUA CARLOS LUIZ FREDERICO",
+        "numero": "05",
+        "complemento": "",
+        "cidade": "Baixo Guandu",
+        "estado": "ES"
+      }
+    },
+    "codigos": {
+      "correios": [ ],
+      "transportadora": [ ],
+      "redespacho": [ ]
+    },
+    "ultimo_status": {
+      "codigo": 1,
+      "nome": "Aguardando coleta / postagem",
+      "data_ocorrencia": "2023-07-14 11:28:07",
+      "data_atualizacao": "2023-07-14 11:28:07",
+      "data_reentrega": "",
+      "prazo_devolucao": "",
+      "mensagem": ""
+    },
+    "nfe": [ ],
+    "cte": [ ],
+    "ocorrencias": [
+      {
+        "codigo": 1,
+        "nome": "Aguardando coleta / postagem",
+        "data_ocorrencia": "2023-07-14 11:28:07",
+        "data_atualizacao": "2023-07-14 11:28:07",
+        "data_reentrega": null,
+        "prazo_devolucao": null,
+        "mensagem": null,
+        "razao_social_transportadora": null,
+        "descricao_ocorrencia": null,
+        "codigo_ocorrencia": null,
+        "nome_entregador": null,
+        "cnpj_cpf_entregador": null,
+        "comprovantes": [ ],
+        "codigos_redespacho": [ ]
+      },
+      {
+        "codigo": 0,
+        "nome": "Solicitado",
+        "data_ocorrencia": "2023-07-14 11:28:07",
+        "data_atualizacao": "2023-07-14 11:28:07",
+        "data_reentrega": null,
+        "prazo_devolucao": null,
+        "mensagem": null,
+        "razao_social_transportadora": null,
+        "descricao_ocorrencia": null,
+        "codigo_ocorrencia": null,
+        "nome_entregador": null,
+        "cnpj_cpf_entregador": null,
+        "comprovantes": [ ],
+        "codigos_redespacho": [ ]
+      }
+    ],
+    "metadados": [ ],
+    "status": 200
+  }

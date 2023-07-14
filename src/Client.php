@@ -8,6 +8,7 @@ use FreteRapido\Endpoints\Abstracts\Endpoint;
 use FreteRapido\Endpoints\Collections\Endpoints;
 use FreteRapido\Endpoints\ShippingCost;
 use FreteRapido\Endpoints\ContractOffer;
+use FreteRapido\Endpoints\Quote;
 use FreteRapido\Exceptions\FreteRapidoException;
 use FreteRapido\Exceptions\EndpointNotFound;
 use FreteRapido\Handlers\UriHandler;
@@ -19,6 +20,7 @@ use GuzzleHttp\Exception\RequestException;
 /**
  * @method ShippingCost shippingCost()
  * @method ContractOffer contractOffer()
+ * @method Quote quote()
  */
 class Client
 {
@@ -90,7 +92,8 @@ class Client
     {
         $this->endpoints = new Endpoints([
             "shippingCost"   => ShippingCost::class,
-            "contractOffer"  => ContractOffer::class
+            "contractOffer"  => ContractOffer::class,
+            "quote"  => Quote::class
         ]);
     }
 }
