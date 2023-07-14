@@ -197,6 +197,11 @@ $args['expedidor'] = [
 //     "valor" => "",
 // ]];
 
+
+$contract_offer = $freteRapido->contractOffer()->execute($args)->get();
+
+echo $contract_offer;
+
 ```
 
 <b>Importante:</b> Os campos comentados com '//' acima são opcionais.  Para entender sobre todos os campos usados para fazer a request de cotação, acesse a documentação oficial no link https://dev.freterapido.com/ecommerce/contratacao_de_frete/
