@@ -24,7 +24,7 @@ class ContractOffer extends Endpoint
             "data_faturamento" => $args['data_faturamento'],
             "forma_pagamento" => $args['forma_pagamento'] ?? '',
             "obs_cliente" => $args['obs_cliente'],
-            "valor_frete_cobrado" => 0.00,
+            "valor_frete_cobrado" => $args['valor_frete_cobrado'],
             "canal" => $args['canal'] ?? '',
             "subcanal" => $args['subcanal'] ?? ''
         ];

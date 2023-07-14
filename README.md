@@ -162,6 +162,7 @@ $args = [
     "data_pedido" => "2023-07-08 16:12:13",
     "data_faturamento" => "2023-08-10 16:12:13",
     "obs_cliente" => "",
+    "valor_frete_cobrado" => 110
 ];
 
 
