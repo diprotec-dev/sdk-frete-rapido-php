@@ -6,9 +6,6 @@ namespace FreteRapido\Endpoints;
 
 use FreteRapido\Endpoints\Abstracts\Endpoint;
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
 class ContractOffer extends Endpoint
 {
     public function execute(array $args)
