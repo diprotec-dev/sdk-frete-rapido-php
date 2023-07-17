@@ -2,7 +2,7 @@
   "name": "diprotec-dev/sdk-frete-rapido-php",
   "description": "FreteRapido PHP Library",
   "type": "lib",
-  "homepage": "https://github.com/diprotec-dev/sdk-freterapido",
+  "homepage": "https://github.com/diprotec-dev/sdk-frete-rapido-php",
   "license": "MIT",
   "autoload": {
     "psr-4": {
