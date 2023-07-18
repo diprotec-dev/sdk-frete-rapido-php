@@ -387,20 +387,78 @@ Você deve receber um retorno via json semelhante ao resultado abaixo:
 }
 ```
 
+## 5. Etiqueta
+Método que permite gerar as etiquetas de um determinado frete, passando o id_frete, layout e formato. segue o exemplo:
 
-## 5. Teste
+```php
+<?php
 
-O SDK possui testes unitários que encontram-se na pasta `tests`. Para rodar todos os testes execute o comando na raiz.
+use FreteRapido\Client;
+
+$auth = [
+    'remetente_cnpj' => '82193244000281',
+    'token' => '1234567891012131415',
+    'platform_code' => 'ABC123456'
+];
+
+$freteRapido = new Client($auth);
+
+$args = [
+    "id_frete" => "FR230714O123",
+    "layout" => "3",
+    "formato" => "pdf"
+];
+
+$label = $freteRapido->label()->execute($args)->get();
+
+echo $label;
+```
+Você deve receber um retorno via json semelhante ao resultado abaixo, com o item `etiqueta` incluindo a url para download em pdf :
+
+```json
+[
+    {
+        "id_frete": [
+            "FR2307173266J"
+        ],
+        "chave_nf": [
+            "35230722907528000181550010000599951937121014"
+        ],
+        "numero_pedido": [
+            "DEF2024"
+        ],
+        "origem": {
+            "cnpj": "82193244000100",
+            "endereco": {
+                "cep": "80620010",
+                "rua": "AVENIDA REPÚBLICA ARGENTINA",
+                "numero": "1155",
+                "bairro": "VILA IZABEL",
+                "cidade": "Curitiba",
+                "uf": "PR"
+            }
+        },
+        "etiqueta": "https://s3.amazonaws.com/prod.freterapido.uploads/tmp/freterapido_a143dee3f9824e89b709a414d2269247.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJJKNUFFWI33F6GPA%2F20230718%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230718T142403Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment&X-Amz-Signature=998a41668409bd1d1b5a2bb35fccc0f2a1687041fa16ed984811d334cd2e01c2"
+    }
+]
+```
+
+Para ter mais detalhes dos campos utilizados na request de geração de etiquetas, acesse a documentação oficial: https://dev.freterapido.com/ecommerce/etiquetas/
+
+
+## 6. Teste
+
+O SDK possui testes unitários que encontram-se na pasta `/tests`. Para executar todos os testes execute o comando na raiz da pasta do sdk.
 
 ``` bash
 $ composer test
 ```
 
-## 6. Segurança
+## 7. Segurança
 
 Se você descobrir algum problema relacionado à segurança, envie um e-mail para ti@diprotec.com.br
 
 
-## 7. Licença
+## 8. Licença
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
