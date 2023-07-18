@@ -1,0 +1,25 @@
+[
+    {
+        "id_frete": [
+            "FR2307173266J"
+        ],
+        "chave_nf": [
+            "35230722907528000181550010000599951937121014"
+        ],
+        "numero_pedido": [
+            "DEF2024"
+        ],
+        "origem": {
+            "cnpj": "82193244000100",
+            "endereco": {
+                "cep": "80620010",
+                "rua": "AVENIDA REPÚBLICA ARGENTINA",
+                "numero": "1155",
+                "bairro": "VILA IZABEL",
+                "cidade": "Curitiba",
+                "uf": "PR"
+            }
+        },
+        "etiqueta": "https://s3.amazonaws.com/prod.freterapido.uploads/tmp/freterapido_7351b5a76db340b182dbbb4bca4ab4d1.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJJKNUFFWI33F6GPA%2F20230718%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230718T134434Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment&X-Amz-Signature=f680a1159045467c1f2fec65f7a89c2ebad6090d9e54cf28c89681cc0ee63b68"
+    }
+]
