@@ -19,6 +19,6 @@ class UriHandler
         $uri = trim($uri, '/');
         
         // Remove double slashes
-        return preg_replace('/\/\/+/', '/', $uri);
+        return $uri;
     }
 }
