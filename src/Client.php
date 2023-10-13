@@ -10,6 +10,7 @@ use FreteRapido\Endpoints\ShippingCost;
 use FreteRapido\Endpoints\ContractOffer;
 use FreteRapido\Endpoints\Quote;
 use FreteRapido\Endpoints\Label;
+use FreteRapido\Endpoints\SendInvoice;
 use FreteRapido\Exceptions\FreteRapidoException;
 use FreteRapido\Exceptions\EndpointNotFound;
 use FreteRapido\Handlers\UriHandler;
@@ -21,6 +22,7 @@ use GuzzleHttp\Exception\RequestException;
 /**
  * @method ShippingCost shippingCost()
  * @method ContractOffer contractOffer()
+ * @method SendInvoice sendInvoice()
  * @method Quote quote()
  * @method Label label()
  */
@@ -49,7 +51,9 @@ class Client
 
             $body = json_decode($response->getBody()->getContents(), true);
 
-            if ($this->isValidResponse($body))
+            if ($body == null) $body = [];
+
+            if ($this->isValidResponse($body, $response->getStatusCode()))
                 return new ResponseHandler($body, $response->getStatusCode());
 
             return (new FreteRapidoException("Freight not found", 404));
@@ -78,9 +82,9 @@ class Client
         $this->endpoints->add($name, $endpointClass);
     }
 
-    public function isValidResponse($body): bool
+    public function isValidResponse($body, $code): bool
     {
-        return isset($body['transportadoras'][0]['oferta']) || isset($body['id_frete']) || isset($body[0]['etiqueta']);
+        return isset($body['transportadoras'][0]['oferta']) || isset($body['id_frete']) || isset($body[0]['etiqueta']) || ($body == null && $code == 200);
     }
 
 
@@ -100,6 +104,7 @@ class Client
         $this->endpoints = new Endpoints([
             "shippingCost"   => ShippingCost::class,
             "contractOffer"  => ContractOffer::class,
+            "sendInvoice"  => SendInvoice::class,
             "quote"  => Quote::class,
             "label"  => Label::class
         ]);
