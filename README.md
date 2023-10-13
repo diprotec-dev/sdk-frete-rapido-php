@@ -445,8 +445,62 @@ Você deve receber um retorno via json semelhante ao resultado abaixo, com o ite
 
 Para ter mais detalhes dos campos utilizados na request de geração de etiquetas, acesse a documentação oficial: https://dev.freterapido.com/ecommerce/etiquetas/
 
+## 6. Envio de Nota Fiscal - 
 
-## 6. Teste
+
+Para realizar uma contratação será necessário já ter feito uma contração e recuperar o `id_frete`.  Ver exemplo abaixo:
+
+```php
+<?php
+
+use FreteRapido\Client;
+
+$auth = [
+    'remetente_cnpj' => '82193244000281',
+    'token' => '1234567891012131415',
+    'platform_code' => 'ABC123456'
+];
+
+$freteRapido = new Client($auth);
+
+$args = [
+    "id_frete" => "FR231013RQW01", //id_frete recuperado na contratação
+    "nota_fiscal" => [
+    [
+        "numero" => "28209",
+        "serie" => "5",
+        "cfop" => "",
+        "chave_acesso" => "41230923200952100154550020000247161950519450",
+        "quantidade_volumes" => "1",
+        "valor" => 81.00,
+        "valor_itens" => 81,00,
+        "data_emissao" => "2019-10-06 13:40:00",
+        "tipo_operacao" => 1,
+        "tipo_emissao" => 1,
+        "protocolo_autorizacao" => "333230109061"
+    ]
+]];
+
+$send_invoice = $freteRapido->sendInvoice()->execute($args)->get();
+
+echo $send_invoice;
+
+```
+
+<b>Importante:</b> No nó do array 'nota_fiscal' => [] você pode passar mais de uma nota se precisar.  Para entender sobre todos os campos usados para fazer a request de cotação, acesse a documentação oficial no link https://dev.freterapido.com/ecommerce/envio_da_nfe/
+
+Você deve receber um retorno via json semelhante ao resultado abaixo:
+
+```json
+{
+  "status": 200
+}
+```
+
+A resposta da request enviada retornará um json, se os dados de retornados conterem o item `{"status": 200}` , significa que a request foi realizada com com sucesso. (Para ter detalhes das possíveis mensagens de erro da api, acesse a documentação oficial no link: https://dev.freterapido.com/common/codigos_de_resposta/)
+
+
+## 7. Teste
 
 O SDK possui testes unitários que encontram-se na pasta `/tests`. Para executar todos os testes execute o comando na raiz da pasta do sdk.
 
@@ -454,11 +508,11 @@ O SDK possui testes unitários que encontram-se na pasta `/tests`. Para executar
 $ composer test
 ```
 
-## 7. Segurança
+## 8. Segurança
 
 Se você descobrir algum problema relacionado à segurança, envie um e-mail para ti@diprotec.com.br
 
 
-## 8. Licença
+## 9. Licença
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
